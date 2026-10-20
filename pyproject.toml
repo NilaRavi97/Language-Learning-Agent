@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "german-tutor"
+version = "0.1.0"
+description = "Lena: a multi-agent German tutor with spaced repetition, built on LangChain and LangGraph."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.4",
+    "langchain-core>=1.6",
+    "langchain-google-genai>=4.4",
+    "langgraph>=1.2",
+    "langgraph-checkpoint-sqlite>=3.1",
+    "pydantic>=2.10",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+german-tutor = "german_tutor.cli:main"
+
+[tool.setuptools]
+packages = ["german_tutor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
