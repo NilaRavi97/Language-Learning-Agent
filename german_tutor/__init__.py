@@ -1,4 +1,4 @@
-"""Lena: a multi-agent German tutor built with LangChain and LangGraph."""
+"""Lena:  a multi-agent German tutor built with LangChain and LangGraph."""
 
 from .graph import RouteDecision, TutorState, build_graph
 from .store import VocabStore
